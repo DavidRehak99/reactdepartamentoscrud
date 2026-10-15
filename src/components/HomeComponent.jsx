@@ -20,9 +20,11 @@ export default class HomeComponent extends Component {
     }
 
     deletedepartamento = (iddepartamento) => {
-        this.service.deleteDepartamento(iddepartamento).then((result) => {
-            this.loadDepartamentos();
-        })
+        if (window.confirm("De verdad quieres borrar este departamento?")) {
+            this.service.deleteDepartamento(iddepartamento).then((result) => {
+                this.loadDepartamentos();
+            })
+        }
     }
 
     componentDidMount = () => {

@@ -57,6 +57,10 @@ updateDepartamento(departamento) {
 }
 
 deleteDepartamento(iddepartamento) {
+
+      
+
+    
     return new Promise(function(resolve,reject){
         let url = Global.urlApiDepartamentos;
         let request = "api/departamentos/" + iddepartamento;
@@ -71,5 +75,6 @@ deleteDepartamento(iddepartamento) {
 
     })
 }
+
 
 }
