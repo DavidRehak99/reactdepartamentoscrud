@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import loading2 from './../assets/images/load_two.gif'
 import ServiceDepartamentos from '../services/ServiceDepartamentos';
 import { NavLink } from 'react-router-dom';
+import DeletDepartamentos from './DeletDepartamentos';
 
 export default class HomeComponent extends Component {
     service = new ServiceDepartamentos();
+    delete = new DeletDepartamentos();
 
     loadDepartamentos = () => {
         this.service.getDepartamentos().then((result) => {
@@ -21,9 +23,9 @@ export default class HomeComponent extends Component {
 
     deletedepartamento = (iddepartamento) => {
         if (window.confirm("De verdad quieres borrar este departamento?")) {
-            this.service.deleteDepartamento(iddepartamento).then((result) => {
-                this.loadDepartamentos();
-            })
+            this.delete.deletedepartamento(iddepartamento);
+            this.loadDepartamentos();
+            
         }
     }
 

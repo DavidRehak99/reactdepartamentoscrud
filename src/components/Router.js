@@ -5,6 +5,7 @@ import MenuComponent from './MenuComponent'
 import HomeComponent from './HomeComponent'
 import CreateDepartamento from './CreateDepartamento'
 import UpdateDepartamento from './UpdateDepartamento'
+import HospitalesMultiples from './HospitalesMultiples'
 
 function UpdateDepartamentoElement() {
       let { id, nombre, localidad } = useParams();
@@ -22,6 +23,7 @@ export default class Router extends Component {
     <Routes>
       <Route path="/home" element={<HomeComponent/>}/>
       <Route path="/create" element={<CreateDepartamento/>}/>
+      <Route path="/hospitales" element={<HospitalesMultiples/>}/>
       <Route path="/update/:id/:nombre/:localidad" element={<UpdateDepartamentoElement/>}/>
       
     </Routes>

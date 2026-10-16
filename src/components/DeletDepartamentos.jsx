@@ -2,6 +2,8 @@ import axios from "axios";
 import Global from "../Global";
 import serviceDepartamentos from "../services/ServiceDepartamentos";
 import updateDepartamento from "./UpdateDepartamento";
+import { Navigate } from 'react-router-dom';
+import React, { Component } from 'react'
 
 
 export default class DeletDepartamentos extends Component {
@@ -13,7 +15,7 @@ export default class DeletDepartamentos extends Component {
 
     deletedepartamento = (iddepartamento) => {
         this.service.deleteDepartamento(iddepartamento).then((result) => {
-            this.loadDepartamentos();
+           
             this.setState({ status: true });
         })
     }

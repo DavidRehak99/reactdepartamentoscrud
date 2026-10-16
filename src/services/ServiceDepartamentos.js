@@ -21,6 +21,22 @@ getDepartamentos() {
     })
 }
 
+async getDatos() {
+    let url = Global.urlApiDepartamentos;
+    let request = "api/departamentos";
+    try {
+
+        let response = await axios.get(url + request);
+        return response.data;
+
+    }catch (error) {
+        console.log(error);
+        throw new Error("Error al obtener los datos de la API");
+    }
+    
+}
+
+
 insertDepartamento(departamento) {
     return new Promise(function(resolve,reject){
     let url = Global.urlApiDepartamentos;

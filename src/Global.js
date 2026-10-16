@@ -1,6 +1,7 @@
 let GLobal = {
 
-    urlApiDepartamentos:"https://apicruddepartamentoscore.azurewebsites.net/"
+    urlApiDepartamentos:"https://apicruddepartamentoscore.azurewebsites.net/",
+    urlApiEjemplos:"https://apiejemplos.azurewebsites.net/"
 
 }
 
